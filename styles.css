@@ -1,0 +1,460 @@
+body {
+    background-color: #f9f3ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invoice-header {
+    background: linear-gradient(135deg, #e9f7fe 0%, #f9f3ff 100%);
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-info {
+    background: linear-gradient(135deg, #f9f3ff 0%, #e9f7fe 100%);
+    font-size: 0.9rem;
+}
+
+.company-info h5 {
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.company-info a {
+    color: #8e44ad;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.company-info a:hover {
+    color: #9b59b6;
+    text-decoration: underline;
+}
+
+.invoice-table th {
+    background-color: #8e44ad !important;
+    border-color: #7a288a !important;
+}
+
+.invoice-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.invoice-table tr:nth-child(even) {
+    background-color: #f3ebff;
+}
+
+.invoice-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.small-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.signature-line {
+    border-bottom: 2px solid #8e44ad;
+    margin-bottom: 5px;
+}
+
+.terms-container {
+    border: 2px solid #e9d8f4;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fcfaff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.terms-container h5 {
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control {
+    border-radius: 8px;
+    border-color: #e9d8f4;
+}
+
+.form-control:focus {
+    border-color: #8e44ad;
+    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25);
+}
+
+.input-group-text {
+    background-color: #8e44ad;
+    color: white;
+    border-color: #8e44ad;
+    font-weight: bold;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 767px) {
+    .logo {
+        max-width: 70px;
+        max-height: 70px;
+    }
+    
+    .invoice-title {
+        font-size: 24px !important;
+    }
+    
+    .company-name {
+        font-size: 18px !important;
+    }
+    
+    .company-info p {
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .small-text {
+        font-size: 0.7rem;
+    }
+    
+    .terms-container {
+        padding: 10px;
+    }
+    
+    .terms-container ul {
+        padding-left: 15px;
+    }
+    
+    .form-control, .input-group-text {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Adjust table for mobile */
+    .invoice-table th, .invoice-table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    /* Make sure buttons aren't too close */
+    .btn + .btn {
+        margin-top: 0.5rem;
+    }
+    
+    /* Better invoice header layout for mobile */
+    .invoice-header .d-flex {
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+    }
+    
+    .invoice-header .logo-container {
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Improved company info for mobile */
+    .company-info {
+        text-align: center !important;
+    }
+    
+    /* Ensure buttons display properly on mobile */
+    .text-center.mt-3.no-print {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .text-center.mt-3.no-print .btn {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    
+    /* Make input fields larger on mobile for easier touch */
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+        height: 38px;
+    }
+    
+    /* Better invoice details spacing */
+    .invoice-details .row {
+        margin-bottom: 8px !important;
+    }
+    
+    /* Ensure balance due stands out on mobile */
+    .balance-label,
+    .balance-value {
+        font-size: 1rem !important;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 575px) {
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .invoice-table {
+        font-size: 0.75rem;
+    }
+    
+    .invoice-title {
+        font-size: 20px !important;
+    }
+    
+    .company-name {
+        font-size: 16px !important;
+    }
+    
+    /* Stack buttons vertically on very small screens */
+    .text-center.mt-3.no-print .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+    
+    /* Make the invoice number and dates more visible */
+    .invoice-details {
+        background-color: rgba(142, 68, 173, 0.05);
+        padding: 8px;
+        border-radius: 8px;
+    }
+    
+    /* Ensure terms are readable */
+    .terms-container ul {
+        padding-left: 10px;
+    }
+    
+    .small-text {
+        font-size: 0.65rem;
+    }
+}
+
+/* Print styles for cleaner printing on a single page */
+@media print {
+    @page {
+        size: A4;
+        margin: 0.3cm;
+    }
+    
+    body {
+        background-color: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-size: 10px !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+    }
+    
+    .logo {
+        max-width: 60px !important;
+        max-height: 60px !important;
+        box-shadow: none !important;
+    }
+    
+    .card-body {
+        padding: 0.3rem !important;
+    }
+    
+    input, select, textarea {
+        border: none !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        font-size: 10px !important;
+        padding: 2px 4px !important;
+        height: auto !important;
+    }
+    
+    .form-control:read-only {
+        background-color: transparent !important;
+    }
+    
+    .input-group-text {
+        border: none !important;
+        background-color: transparent !important;
+        color: #333 !important;
+        font-size: 10px !important;
+        padding: 2px 4px !important;
+    }
+    
+    .balance-label, .balance-value {
+        background-color: #8e44ad !important;
+        color: rgb(0, 0, 0) !important;
+        font-weight: bold !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .invoice-table th {
+        background-color: #8e44ad !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-size: 10px !important;
+        padding: 2px !important;
+    }
+    
+    .invoice-header {
+        background: linear-gradient(135deg, #e9f7fe 0%, #f9f3ff 100%) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .company-info {
+        background: linear-gradient(135deg, #f9f3ff 0%, #e9f7fe 100%) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .invoice-divider {
+        border-top: 4px solid #fd0303 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        margin: 0 !important;
+    }
+    
+    .terms-container {
+        font-size: 9px !important;
+        padding: 3px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .small-text {
+        font-size: 8px !important;
+        margin-bottom: 2px !important;
+        line-height: 1.1 !important;
+    }
+    
+    /* Hide buttons when printing */
+    .btn, 
+    button,
+    .no-print {
+        display: none !important;
+    }
+    
+    /* Adjust spacing for print */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .col, .col-md-6, .col-6, .col-5, .col-7 {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+    
+    /* Ensure table fits on the page */
+    .invoice-table {
+        font-size: 10px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .invoice-table th,
+    .invoice-table td {
+        padding: 2px !important;
+    }
+    
+    /* Compact the bottom section */
+    .p-3, .p-2 {
+        padding: 0.2rem !important;
+    }
+    
+    /* Make sure the whole invoice fits on one page */
+    .mb-4, .mb-3, .mb-2, .mb-1 {
+        margin-bottom: 0.1rem !important;
+    }
+    
+    .mt-4, .mt-3, .mt-2, .mt-1 {
+        margin-top: 0.1rem !important;
+    }
+    
+    /* Invoice title smaller for print */
+    .invoice-title {
+        font-size: 24px !important;
+    }
+    
+    .company-name {
+        font-size: 16px !important;
+    }
+    
+    /* Ensure balance due is always visible */
+    .invoice-summary {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    /* Signature more compact */
+    .signature-container {
+        margin-top: 0.2rem !important;
+    }
+    
+    .signature-line {
+        margin-bottom: 2px !important;
+    }
+    
+    /* Critical - Ensure balance due is always visible */
+    .balance-due-row {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        position: relative !important;
+        display: block !important;
+        border: 2px solid #8e44ad !important;
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+        background-color: rgba(142, 68, 173, 0.1) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Make sure invoice summary doesn't break across pages */
+    .invoice-summary {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-top: 0 !important;
+    }
+}
+
+.balance-due-row {
+    background-color: rgba(142, 68, 173, 0.1);
+    border: 1px solid #8e44ad;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.balance-label, .balance-value {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: #8e44ad;
+}
+
+.balance-value {
+    border-color: #8e44ad !important;
+}

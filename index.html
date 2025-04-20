@@ -73,24 +73,24 @@
 <body>
     <div class="container mt-4 mb-4">
         <div class="card shadow">
-            <div class="card-body p-0">
+            <div class="card-body p-3">
                 <!-- Invoice Header -->
-                <div class="row invoice-header">
-                    <div class="col-md-6">
-                        <div class="d-flex align-items-center p-3">
-                            <div class="logo-container me-3">
+                <div class="row invoice-header align-items-center">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center p-2 flex-column flex-sm-row">
+                            <div class="logo-container me-sm-3 mb-2 mb-sm-0">
                                 <img src="sublime.png" alt="Sublime Prints Logo" class="logo">
                             </div>
                             <div>
-                                <h1 class="invoice-title mb-0">INVOICE</h1>
+                                <h1 class="invoice-title mb-0 text-center text-sm-start">INVOICE</h1>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 company-info">
-                        <div class="p-3 text-end">
-                            <h5 class="company-name mb-1">SUBLIME PRINTS</h5>
-                            <p class="mb-1">OFFICE NO: 33A,HM ROAD NINTAVUR-18</p>
-                            <p class="mb-1">PRODUCTION FACTORY: MAHARAGAMA,COLOMBO</p>
+                    <div class="col-lg-6 company-info">
+                        <div class="p-2 text-lg-end text-center">
+                            <h5 class="company-name mb-2">SUBLIME PRINTS</h5>
+                            <p class="mb-1">OFFICE NO: 33A, HM ROAD NINTAVUR-18</p>
+                            <p class="mb-1">PRODUCTION FACTORY: MAHARAGAMA, COLOMBO</p>
                             <p class="mb-1">CONTACT NO: <a href="tel:+94759440067">+94 75 944 0067</a></p>
                             <p class="mb-1">EMAIL: <a href="mailto:sublimeprintsntr@gmail.com">sublimeprintsntr@gmail.com</a></p>
                             <p class="mb-0">FACEBOOK: <a href="https://www.facebook.com/profile.php?id=100084428397782&mibextid=ZbWKwL" target="_blank">SUBLIME PRINTS</a></p>
@@ -98,31 +98,31 @@
                     </div>
                 </div>
 
-                <hr class="invoice-divider m-0">
+                <hr class="invoice-divider">
 
                 <!-- Invoice Details -->
-                <div class="row">
-                    <div class="col-md-6 p-2">
-                        <div class="bill-to mb-2">
-                            <h5 class="mb-1">BILL TO</h5>
-                            <input type="text" class="form-control" id="billTo" placeholder="Client Name">
+                <div class="row g-3">
+                    <div class="col-lg-6">
+                        <div class="bill-to mb-3">
+                            <h5 class="mb-3">BILL TO</h5>
+                            <input type="text" class="form-control form-control-lg" id="billTo" placeholder="Client Name">
                         </div>
                     </div>
-                    <div class="col-md-6 p-2">
+                    <div class="col-lg-6">
                         <div class="invoice-details">
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-5 fw-bold">INVOICE#</div>
                                 <div class="col-7">
                                     <input type="text" class="form-control" id="invoiceNumber" value="INV2025-37">
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-5 fw-bold">INVOICE DATE</div>
                                 <div class="col-7">
                                     <input type="date" class="form-control" id="invoiceDate">
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row align-items-center">
                                 <div class="col-5 fw-bold">INVOICE DUE</div>
                                 <div class="col-7">
                                     <input type="date" class="form-control" id="invoiceDue">
@@ -133,14 +133,14 @@
                 </div>
 
                 <!-- Invoice Items -->
-                <div class="table-responsive">
+                <div class="table-responsive mt-4">
                     <table class="table table-bordered invoice-table mb-0">
                         <thead>
-                            <tr class="bg-primary text-white">
-                                <th width="60%">DESCRIPTION</th>
-                                <th width="15%">PRICE</th>
+                            <tr>
+                                <th width="50%">DESCRIPTION</th>
+                                <th width="20%">PRICE</th>
                                 <th width="10%">QTY</th>
-                                <th width="15%">AMOUNT</th>
+                                <th width="20%">AMOUNT</th>
                             </tr>
                         </thead>
                         <tbody id="invoiceItems">
@@ -167,9 +167,11 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4" class="py-1">
-                                    <button id="addRow" class="btn btn-sm btn-sweet-primary">Add Item</button>
-                                    <button id="removeRow" class="btn btn-sm btn-sweet-danger">Remove Item</button>
+                                <td colspan="4" class="py-2">
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <button id="addRow" class="btn btn-sm btn-sweet-primary me-sm-2 mb-2 mb-sm-0">Add Item</button>
+                                        <button id="removeRow" class="btn btn-sm btn-sweet-danger">Remove Item</button>
+                                    </div>
                                 </td>
                             </tr>
                         </tfoot>
@@ -177,25 +179,25 @@
                 </div>
 
                 <!-- Invoice Summary -->
-                <div class="row">
-                    <div class="col-md-6 p-2">
+                <div class="row mt-4">
+                    <div class="col-lg-6 mb-3">
                         <div class="terms-container">
-                            <h5 class="mb-1">TERMS & CONDITIONS:</h5>
-                            <p class="text-danger fw-bold mb-1">VERY IMPORTANT</p>
-                            <ul class="small-text ps-3 mb-1">
+                            <h5 class="mb-2">TERMS & CONDITIONS:</h5>
+                            <p class="text-danger fw-bold mb-2">VERY IMPORTANT</p>
+                            <ul class="ps-3 mb-2">
                                 <li>Please confirm your order with a 50% advance payment. The balance should be paid before the delivery.</li>
                                 <li>Delivery is within 14-21 working days from the date of order confirmation and receipt of advance.</li>
                                 <li>Price is determined by the T-shirt / Short design, Embroidery, Print, Quantity, and Market conditions.</li>
                                 <li>Island-wide delivery service is included.</li>
                                 <li>Delivery charges must be borne by you.</li>
                             </ul>
-                            <p class="small-text mb-0"><strong>Note:</strong></p>
-                            <p class="small-text mb-0">*THIS IS SYSTEM AUTO GENERATED DOCUMENT (RUBBER STAMP NOT REQUIRED)*</p>
+                            <p class="mb-0"><strong>Note:</strong></p>
+                            <p class="mb-0">*THIS IS SYSTEM AUTO GENERATED DOCUMENT (RUBBER STAMP NOT REQUIRED)*</p>
                         </div>
                     </div>
-                    <div class="col-md-6 p-2">
+                    <div class="col-lg-6">
                         <div class="invoice-summary">
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-6 text-end fw-bold">SUBTOTAL</div>
                                 <div class="col-6">
                                     <div class="input-group">
@@ -204,7 +206,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-6 text-end fw-bold">DELIVERY CHARGE</div>
                                 <div class="col-6">
                                     <div class="input-group">
@@ -213,7 +215,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-6 text-end fw-bold">TOTAL</div>
                                 <div class="col-6">
                                     <div class="input-group">
@@ -222,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-1">
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-6 text-end fw-bold">PAID</div>
                                 <div class="col-6">
                                     <div class="input-group">
@@ -231,21 +233,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row balance-due-row">
-                                <div class="col-6   text-end fw-bold balance-label p-2">BALANCE DUE</div>
-                                <div class="col-6 p-0">
-                                    <div class="input-group">
-                                        <span class="input-group-text currency-symbol">Rs</span>
-                                        <input type="text" class="form-control balance-value" id="balanceDue" readonly>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="row balance-due-row align-items-center">
+  <div class="col-6 text-start balance-label">BALANCE DUE</div>
+  <div class="col-6 text-end balance-value">Rs <span id="balanceDue"></span></div>
+</div>
                         </div>
 
-                        <div class="signature-container mt-2">
+                        <div class="signature-container mt-4">
                             <div class="signature-line"></div>
-                            <div class="text-center"></div>
-                            <div class="text-end mt-1">
+                            <div class="text-center">Authorized Signature</div>
+                            <div class="text-end mt-2">
                                 <span id="currentDate"></span>
                             </div>
                         </div>
@@ -254,10 +251,18 @@
             </div>
         </div>
 
-        <div class="text-center mt-3 no-print">
-            <button id="newInvoiceBtn" class="btn btn-sweet-secondary me-2">New Invoice</button>
-            <button id="printInvoice" class="btn btn-sweet-primary me-2">Print Invoice</button>
-            <button id="saveInvoice" class="btn btn-sweet-secondary">Save Invoice</button>
+        <div class="text-center mt-4 mb-3 no-print">
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <button id="newInvoiceBtn" class="btn btn-sweet-secondary w-100">New Invoice</button>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <button id="printInvoice" class="btn btn-sweet-primary w-100">Print Invoice</button>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <button id="saveInvoice" class="btn btn-sweet-secondary w-100">Save Invoice</button>
+                </div>
+            </div>
         </div>
     </div>
 

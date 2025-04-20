@@ -227,7 +227,7 @@ function calculateAll() {
     // Update display
     document.getElementById('subtotal').value = subtotal.toFixed(2);
     document.getElementById('total').value = total.toFixed(2);
-    document.getElementById('balanceDue').value = balanceDue.toFixed(2);
+    document.getElementById('balanceDue').innerText = balanceDue.toFixed(2);
     
     // Highlight balance due for better visibility in print
     const balanceDueElement = document.getElementById('balanceDue');
